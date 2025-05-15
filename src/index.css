@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@700&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-space-mono: "Space Mono", monospace;
+
+  /* Colors */
+  --color-primary-green-400: hsl(172, 67%, 45%);
+   --color-neutral-green-200: hsla(173, 61%, 77%);
+  --color-neutral-green-750: hsla(183, 79%, 24%, 1);
+   --color-neutral-green-800: hsla(183, 85%, 21%);
+  --color-neutral-green-900: hsl(183, 100%, 15%);
+  --color-neutral-grey-500: hsl(186, 14%, 43%);
+  --color-neutral-grey-400: hsl(184, 14%, 56%);
+  --color-neutral-grey-200: hsl(185, 41%, 84%);
+  --color-neutral-grey-50: hsl(189, 47%, 97%);
+  --color-white: hsl(0, 100%, 100%);
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-neutral-grey-200 font-space-mono;
+  }
+  main {
+    @apply flex flex-col bg-white justify-center items-center min-h-full w-full p-4 rounded-3xl [box-shadow:0px_32px_43px_0px_hsla(185,_38%,_50%,_0.2)];
+  }
+  label {
+    @apply font-bold text-[16px] leading-6 text-neutral-grey-500;
+  }
+  .tip button {
+    @apply px-4 py-2 bg-neutral-green-900 rounded-sm;
+  }
+}
