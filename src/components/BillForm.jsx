@@ -7,6 +7,7 @@ const BillForm = ({
   setTipPercent,
   people,
   setPeople,
+  error,
 }) => {
   const tipOptions = ["5", "10", "15", "25", "50"];
   return (
@@ -58,13 +59,24 @@ const BillForm = ({
         </div>
 
         <div className="number-of-people mb-6">
-          <label
-            htmlFor="people"
-            className="block text-neutral-grey-500 font-bold mb-2"
+          <div className="flex justify-between items-center">
+            <label
+              htmlFor="people"
+              className="block text-neutral-grey-500 font-bold mb-2"
+            >
+              Number of People
+            </label>
+            {error && (
+              <p className="text-neutral-orange-400 text-base leading-6 font-bold text-right mb-2 ">
+                {error}
+              </p>
+            )}
+          </div>
+          <div
+            className={`people flex items-center w-full rounded-md px-4 py-2
+    bg-neutral-grey-50 text-neutral-grey-800
+    ${error ? "border-2 border-neutral-orange-400" : ""}`}
           >
-            Number of People
-          </label>
-          <div className="people flex items-center w-full rounded-md bg-neutral-grey-50 text-neutral-grey-800 px-4 py-2">
             <img src={personIcon} alt="Person icon" className="w-3 h-4" />
             <input
               id="people"
