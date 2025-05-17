@@ -7,6 +7,7 @@ const App = () => {
   const [bill, setBill] = useState("");
   const [tipPercent, setTipPercent] = useState("");
   const [people, setPeople] = useState("");
+  const [error, setError] = useState("");
 
   const billAmount = parseFloat(bill) || 0;
   const tip = parseFloat(tipPercent) || 0;
@@ -22,6 +23,16 @@ const App = () => {
     setPeople("");
   };
 
+  const handlePeopleChange = (value) => {
+  setPeople(value);
+  if (parseInt(value) === 0) {
+    setError("Can't be zero");
+  } else {
+    setError("");
+  }
+};
+
+
   return (
     <>
       <Header />
@@ -33,7 +44,8 @@ const App = () => {
           tipPercent={tipPercent}
           setTipPercent={setTipPercent}
           people={people}
-          setPeople={setPeople}
+          setPeople={handlePeopleChange}
+          error={error}
         />
 
         <ResultPanel
