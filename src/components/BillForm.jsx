@@ -16,7 +16,7 @@ const BillForm = ({
         <label htmlFor="bill" className="block mb-2">
           Bill
         </label>
-        <div className="bill flex justify-between items-center w-full rounded-md bg-neutral-grey-50 text-neutral-grey-800 px-4 py-2 hover:border-2 hover:border-primary-green-400 cursor-pointer">
+        <div className="bill flex justify-between items-center w-full rounded-md bg-neutral-grey-50 text-neutral-green-900 font-bold text-2xl leading-9 px-4 py-2 hover:border-2 hover:border-primary-green-400 cursor-pointer">
           <label htmlFor="amount">$</label>
           <input
             id="bill"
@@ -51,7 +51,7 @@ const BillForm = ({
               type="button"
               value={!tipOptions.includes(tipPercent) ? tipPercent : ""}
               onChange={(e) => setTipPercent(e.target.value)}
-              className="bg-neutral-grey-50 text-neutral-grey-500 text-2xl font-bold py-2 rounded-md hover:bg-neutral-grey-300 cursor-pointer"
+              className="bg-neutral-grey-50 text-neutral-grey-500 text-2xl font-bold py-2 rounded-md hover:bg-neutral-grey-200 cursor-pointer"
             >
               Custom
             </button>
@@ -85,7 +85,7 @@ const BillForm = ({
               placeholder="0"
               value={people}
               onChange={(e) => setPeople(e.target.value)}
-              className="ml-4 w-full bg-transparent text-right outline-none placeholder:text-neutral-grey-400"
+              className="ml-4 w-full bg-transparent text-right outline-none text-neutral-green-900 font-bold text-2xl leading-9 placeholder:text-neutral-grey-400"
             />
           </div>
         </div>
