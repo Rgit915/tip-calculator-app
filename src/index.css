@@ -34,7 +34,7 @@
     @apply flex flex-col bg-white w-full p-8 max-w-5xl rounded-t-3xl [box-shadow:0px_32px_43px_0px_hsla(185,_38%,_50%,_0.2)] md:rounded-3xl lg:flex-row lg:gap-12;
   }
   label {
-    @apply font-bold text-[16px] leading-6 text-neutral-grey-500;
+    @apply font-bold text-base leading-6 text-neutral-grey-500;
   }
   .tip button {
     @apply px-4 py-2 bg-neutral-green-900 rounded-sm;
